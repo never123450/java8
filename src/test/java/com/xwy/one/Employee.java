@@ -19,7 +19,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getName() {
+    public Employee() {
+		super();
+	}
+
+	public String getName() {
         return name;
     }
 
