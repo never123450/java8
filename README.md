@@ -9,11 +9,10 @@
 - ConcurrentHashMap 1.7 以前分段锁，1.8 开始 CAS 算法
 - 永久代 换成了 元空间（MetaSpace）
 
-
 # 为什么使用Lambda表达式
+
 Lambda是一个匿名函数，我们可以把 Lambda表达式理解为是一段可以传递的代码(将代码像数据一样进行传递）。
 可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到了提升。
-
 
 一、Lambda表达式的基镛语法:Java8中引入了一个新的操作符"->”该操作符称为箭头操作符或 Lambda 操作符 。箭头操作符将 Lambda 表达式拆分成两鳝分:
 左侧:Lambda表达式的参数列表
@@ -42,5 +41,3 @@ Comparator<Integer> com= (x,y) -> Integer.compare(x, y);
 
 左右遇一括号省
 左侧推断类型省
-
-
