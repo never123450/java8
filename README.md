@@ -41,3 +41,58 @@ Comparator<Integer> com= (x,y) -> Integer.compare(x, y);
 
 左右遇一括号省
 左侧推断类型省
+
+
+# Java8 内置的四大核心函数式接口
+
+ *         Consumer<T> ：消费型接口 void accept(T t);
+ *         Supplier<T> ：供给型接口 T get();
+ *         Function<T,R> ： 函数型接口 R apply(T t);
+ *         Predicate<T> ： 断言型接口 boolean test(T t);
+
+
+# 方法引用与构造器引用
+
+（com.xwy.one.TestLambda3）
+
+方法引用：若 Lambda 体中的内容有方法已经实现了，我们可以使用“方法引用”
+
+（可以理解为方法引用是 Lambda 表达式的另外一种表现形式）
+主要有三种语法格式：
+* 对象::实例方法名
+* 类::静态方法名
+* 类::实例方法名
+
+
+### 注意：
+- 1.Lambda 体中调用方法的参数列表与返回值类型，要与函数式接口中的抽象方法列表和返回值类型保持一致
+- 2.若 Lambda 参数列表中的第一个参数是实例方法的调用者，而第二个参数是是立法法的参数时，可以使用ClassName::method
+
+## 构造器引用： 
+格式 ClassName::new   
+### 注意：
+需要调用的构造器列表要与函数式接口中的抽象方法的参数列表保持一致
+
+## 数组引用
+
+
+# 了解Stream
+Java8中有两大最为重要的改变。第一个是 Lambda 表达式;另外一个则是 Stream API(java.util.stream.*)。
+Stream 是 Java8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常复杂的查找、过滤和映射数据等操作。
+使用 Stream API 对集合数据进行操作，就类似于使用SQL执行的数据库查询。也可以使用Stream API来并行执行操作。简而言之，
+Stream API提供了一-种高效且易于使用的处理数据的方式。
+
+
+## Stream 的三个 操作步骤：
+
+（com.xwy.one.TestStreamAPI）
+- 1.创建 Stream
+- 2.中间操作
+
+Stream的中间操作
+多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，否则中间操作不会执行任何的处理!
+而在终止操作时一次性全部处理，称为“惰性求值”
+
+- 3.终止操作（终端操作）
+
+
