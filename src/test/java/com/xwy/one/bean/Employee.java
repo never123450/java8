@@ -1,4 +1,4 @@
-package com.xwy.one;
+package com.xwy.one.bean;
 
 /**
  * @description:
