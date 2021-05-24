@@ -31,8 +31,10 @@ public class TestTransaction {
 		transactions.stream().map(t -> t.getTrader().getCity()).distinct().forEach(System.out::println);
 
 		// 3.查找所有来自剑桥的交易员，并按姓名排序。
-		transactions.stream().filter(t -> t.getTrader().getCity().equals("Cambri")).map(Transaction::getTrader)
-				.sorted((t1, t2) -> t1.getName().compareTo(t2.getName())).forEach(System.out::println);
+		System.out.println("3.查找所有来自剑桥的交易员，并按姓名排序。");
+		transactions.stream().filter(t -> t.getTrader().getCity().equals("Cambri")).map(t -> t.getTrader().getName())
+				.sorted((t1, t2) -> t1.compareTo(t2)).forEach(System.out::println);
+		System.out.println();
 
 		// 4.返回所有交易员的姓名字符串，按字母顺序排序。
 		transactions.stream().map(t -> t.getTrader().getName()).sorted().forEach(System.out::println);
