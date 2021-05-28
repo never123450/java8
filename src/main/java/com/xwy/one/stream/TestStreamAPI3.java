@@ -1,4 +1,4 @@
-package com.xwy.one;
+package com.xwy.one.stream;
 
 import com.xwy.one.bean.Employee;
 import com.xwy.one.bean.Employee.Status;

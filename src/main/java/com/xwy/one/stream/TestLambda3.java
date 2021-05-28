@@ -1,4 +1,4 @@
-package com.xwy.one;
+package com.xwy.one.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;

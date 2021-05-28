@@ -112,6 +112,43 @@ Fork/Join 框架：就是在必要的情况下，将一个大任务，进行拆�
 那么该线程会处于等待状态.而在 fork/join 框架实现中，如果某个子问题由于等待另外一个子问题的完成而无法继续运行.
 那么处理该子问题的线程会主动寻找其他尚未运行的子问题来执行.这种方式减少了线程的等待时间，提高了性能.
 
+# Optional容器类的常用方法:
+     * Optional.of(T t) :创建一个 Optional 实例
+     * Optional. empty() :创建一个空的 Optional 实例
+     * Optional. ofNu1lable(T t):若t不为nu11,创建 Optional 实例,否则创建空实例
+     * isPresent() :判断是否包含值
+     * orElse(T t) :如果调用对象包含值, 返回该值，否则返回t
+     * orElseGet(Supplier s) : 如果调用对象包含值,返回该值，否则返回s获取的值
+     * map(Function f):如果有值对其处理，并返回处理后的0ptional,否则返回Optional.empty()
+     * flatMap( Function mapper):与map类似，要求返回值必须是Optional
 
 
+# 接口中的默认方法与静态方法
+
+接口中的默认方法
+接口默认方法的”类优先”原则
+若一个接口中定义了一个默认方法，而另外一个父类或接口中又定义了一个同名的方法时
+
+- 选择父类中的方法。如果一个父类提供了具体的实现，那么
+接口中具有相同名称和参数的默认方法会被忽略。
+- 接口冲突。如果一个父接口提供一一个默认方法，而另一个接
+口也提供了一个具有相同名称和参数列表的方法(不管方法
+是否是默认方法)，那么必须覆盖该方法来解决冲突
+
+# 时间
+
+使用LocalDate、LocalTime、LocalDateTime
+- LocalDate、LocalTime、 LocalDate Time类的实例是不可变的对象，分别表示使用IS0-8601日
+历系统的日期、时间、日期和时间。它们提供了简单的日期或时间，并不包含当前的时间信
+息。也不包含与时区相关的信息。
+
+注: IS0-8601 日历系统是国际标准化组织制定的现代公民的日期和时间的表示法
+
+## 日期的操纵
+- TemporalAdjuster :时间校正器。有时我们可能需要获取例如:将日期调整到“下个周日”等操作。
+- TemporalAdjusters: 该类通过静态方法提供了大量的常用TemporalAdjuster的实现。
+例如获取下个周日:
+LocalDate nextSunday = LocalDate .now( ) . with(
+    TemporalAdjusters●next (DayOfWeek . SUNDAY)
+);
 
