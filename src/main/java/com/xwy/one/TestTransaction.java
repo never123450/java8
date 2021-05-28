@@ -1,11 +1,12 @@
 package com.xwy.one;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-
 import com.xwy.one.bean.Trader;
 import com.xwy.one.bean.Transaction;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * @Date 2021年05月23日22:26:45
@@ -58,7 +59,7 @@ public class TestTransaction {
 
 		// 8.找到交易额最小的交易。
 		Optional<Transaction> min = transactions.stream()
-				.min((t1, t2) -> Integer.compare(t1.getValue(), t2.getValue()));
+				.min(Comparator.comparingInt(Transaction::getValue));
 		System.out.println(min.get());
 		System.out.println();
 	}

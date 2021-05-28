@@ -1,13 +1,13 @@
 package com.xwy.one;
 
+import com.xwy.one.bean.Employee;
+
 import java.io.PrintStream;
 import java.util.Comparator;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import com.xwy.one.bean.Employee;
 
 /**
  * mac

@@ -1,12 +1,12 @@
 package com.xwy.one;
 
+import com.xwy.one.bean.Employee;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
-
-import com.xwy.one.bean.Employee;
 
 /**
  * @date 2021年05月22日08:26:19

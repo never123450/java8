@@ -20,7 +20,7 @@ public class TestForkJoin {
 		Instant startInstant = Instant.now();
 		ForkJoinPool pool = new ForkJoinPool();
 		ForkJoinTask<Long> task = new ForkJoinCalculate(0, dataLong);
-		Long sumLong = pool.invoke(task);
+		pool.invoke(task);
 		Instant endInstant = Instant.now();
 		System.out.println("fork/Join框架 耗费：" + Duration.between(startInstant, endInstant).toMillis());
 		
