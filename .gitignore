@@ -1,0 +1,10 @@
+.idea
+*.iml
+.classpath
+.project
+.settings
+Java8.iml
+target
+pom.properties
+MANIFEST.MF
+META-INF
