@@ -14,7 +14,7 @@
 Lambda是一个匿名函数，我们可以把 Lambda表达式理解为是一段可以传递的代码(将代码像数据一样进行传递）。
 可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到了提升。
 
-一、Lambda表达式的基镛语法:Java8中引入了一个新的操作符"->”该操作符称为箭头操作符或 Lambda 操作符 。箭头操作符将 Lambda 表达式拆分成两鳝分:
+一、Lambda表达式的基镛语法:Java8中引入了一个新的操作符"->”该操作符称为箭头操作符或 Lambda 操作符 。箭头操作符将 Lambda 表达式拆分成两部分:
 左侧:Lambda表达式的参数列表
 右侧:Lambda表达式中所需扶行的功能,即Lambda体
 
@@ -45,10 +45,10 @@ Comparator<Integer> com= (x,y) -> Integer.compare(x, y);
 
 # Java8 内置的四大核心函数式接口
 
- *         Consumer<T> ：消费型接口 void accept(T t);
- *         Supplier<T> ：供给型接口 T get();
+ *         Consumer<T>   ： 消费型接口 void accept(T t);
+ *         Supplier<T>   ： 供给型接口 T get();
  *         Function<T,R> ： 函数型接口 R apply(T t);
- *         Predicate<T> ： 断言型接口 boolean test(T t);
+ *         Predicate<T>  ： 断言型接口 boolean test(T t);
 
 
 # 方法引用与构造器引用
@@ -80,7 +80,7 @@ Comparator<Integer> com= (x,y) -> Integer.compare(x, y);
 Java8中有两大最为重要的改变。第一个是 Lambda 表达式;另外一个则是 Stream API(java.util.stream.*)。
 Stream 是 Java8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常复杂的查找、过滤和映射数据等操作。
 使用 Stream API 对集合数据进行操作，就类似于使用SQL执行的数据库查询。也可以使用Stream API来并行执行操作。简而言之，
-Stream API提供了一-种高效且易于使用的处理数据的方式。
+Stream API提供了一种高效且易于使用的处理数据的方式。
 
 
 ## Stream 的三个 操作步骤：
